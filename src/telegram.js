@@ -252,7 +252,7 @@ class TelegramBot extends EventEmitter {
       }
 
       const attachName = 'photo';
-      const [formData] = this._formatSendData(attachName, options.thumbnail.replace('attach://', ''));
+      const [formData] = this._formatSendData(attachName, options.thumbnail);
 
       if (formData) {
         opts.formData[attachName] = formData[attachName];
